@@ -1,0 +1,62 @@
+Reference url: https://requests.readthedocs.io/en/latest/
+
+Most used:
+Library: import requests
+Library: import json
+Library: import configparser
+requests.get: to pass url and parameters
+variable.text: display the response  #variable = response
+json.loads: Convert string document in dictionary
+json.load: read json document from external file
+variable.json:Convert string document to json directly using requests library
+variable.status_code: check status code of response
+variable.header: to pass headers
+variable.cookies: to print cookies
+requests.post: to pass url, body(json),headers  #json and headers should be passed in dictionary format
+.ini file for configurations - Each section is identified by square bracket
+variable = configparser.ConfigParser() - call configparser method
+variable.read(confi file path)
+access the config file = variable['API']['endpoint']
+verify=false - to override ssl certifications
+variable.history: to see all the redirections
+allow_redirects: pass this attribute in requests.get to allow redirections
+timeout = s: to provide explicit time out for api response, to pass it as a parameter
+
+Install Behave
+pip install git+https://github.com/behave/behave
+
+behave ./features : Will execute all feature files under features folder
+behave --no-capture --tags=between-time  --format plain :
+    --no-capture: Displays the log file in console
+    --tags: To run only the scenarios with a valid tag specified
+    --format plain: Last print statement will not be displayed sometimes
+
+
+
+
+Install Allure reporting
+pip install allure-behave
+
+behave  --no-capture -f allure_behave.formatter:AllureFormatter -o filepath - json report
+
+How to install Allure command line on ubuntu
+1. Download the tar file from "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/"
+2. Unzip the folder
+3. Copy the bin folder path
+4. Navigate to home folder
+5. Press ctrl + H to unhide the files and folder
+6. Open .bashhrc file
+7. At the bottom of the file type = export PATH=$PATH : "Downloaded allure bin path"
+
+
+How to upload the allure report online
+1. Navigate to the allure json folder
+2. Make sure the folder name is allure-results
+3. Open terminal outside the allure-results folder
+4. Type allure generate - this command will look for allure-results folder to generate html files
+5. allure-reports folder will be created
+6. Login to netlify app and upload the allure-reports folder
+
+
+
+behave-python-api-automation.netlify.app
