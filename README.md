@@ -50,15 +50,6 @@ endpoint = config['API']['endpoint']
 
 `response = requests.get(URL, verify=False)`
 
-### Check request history
-
-`response.history`
-
-### Control redirects and timeouts
-
-`response = requests.get(URL, allow_redirects=False, timeout=5)`
-
-### Install Behave
 
 `pip install git+https://github.com/behave/behave`
 
