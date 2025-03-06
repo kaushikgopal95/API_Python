@@ -1,5 +1,6 @@
-Feature: HTTP Request Methods  
-  HTTP supports multiple request types, including GET, PUT, POST, DELETE, PATCH, and HEAD.  
+Feature: HTTP Request Methods
+This feature covers testing various HTTP request methods, including GET, POST, PUT, DELETE, PATCH, and HEAD, 
+to ensure they function correctly and return expected responses.
 
   @get  
   Scenario: Successful GET Request  
